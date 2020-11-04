@@ -1,0 +1,68 @@
+﻿@model EmployeesArrivalWeb.Models.UsersModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class='jumbotron'>
+    <h2> Employee Arrival System
+</div>
+<div class='container'>
+    <table class="table table-striped">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for ids..">
+        <thead class='thead-dark'>
+            <tr>
+                <th scope="col">Employee Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">SurName</th>
+                <th scope="col">Arrival</th>
+                <th scope="col">ArrivalTime</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ul id="myUL">
+                <li><a href="#">Robert</a></li>
+                <li><a href="#">Felicity</a></li>
+
+                <li><a href="#">Wawren</a></li>
+                <li><a href="#">Bob</a></li>
+
+                <li><a href="#">Calvin</a></li>
+                <li><a href="#">Christina</a></li>
+                <li><a href="#">Cindy</a></li>
+            </ul>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td><button class='btn btn-info btn-lg'></td>
+                <td>12:05</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td><button class='btn btn-info btn-lg'></td>
+                <td>16:05</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td><button class='btn btn-info btn-lg'></td>
+                <td>10:05</td>
+            </tr>
+        </tbody>
+        @*Here will be the finished version of the table -->*@
+        @*@foreach (var employee in this.Model.Employees)
+        {
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>@employee.Name</td>
+                    <td>@employee.SurName</td>
+                    <td><button class='btn btn-info btn-lg'></td>
+                    <td id="ArrTime">@employee.ArrivalTime</td>
+                </tr>
+            </tbody>
+        }*@
+    </table>
